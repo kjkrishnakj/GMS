@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GMS | Complaints</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  
+  <style>
+  body {
+   
+   background-image: url("/img/bg.jpg");
+   
+}
+.glass-content {
+   padding: 20px;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+ }
+
+  .table-transparent {
+  background-color: transparent;
+  }
+  .continer{
+    display:inline-flex;
+  }
+  li{
+    text-align: left;
+  }
+
+  ul{
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+span{
+    width: 10px;
+    margin-left: 100px;
+}
+.container{
+    color: white;
+}
+#input_box{
+  margin-left: 250px;
+  width: 30%;
+}
+.btn{
+  width: 100px;
+}
+
+
+
+
+
+.glassy-form-container {
+    margin-top: 3cm;
+            background: rgba(255, 255, 255, 0.5); /* Transparent white background */
+            padding: 20px;
+            width: 20cm;
+
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Style for form input boxes */
+        .glassy-form-container input {
+            background: transparent; /* Transparent input background */
+            border: none; /* Remove input borders */
+            border-bottom: 2px solid #ccc; /* Add a bottom border */
+            margin-bottom: 15px; /* Add spacing between inputs */                                   
+        }
+        textarea{
+            background: transparent; /* Transparent input background */
+            border: none; /* Remove input borders */
+            border-bottom: 2px solid #ccc; /* Add a bottom border */
+            margin-bottom: 15px; /* Add spacing between inputs */
+
+        }
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-transparent navbar-fixed-top" >
+        <div class="container">
+            <a class="navbar-brand" href="#">Garbage Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        
+        <div class="glassy-form-container">
+            <form action="/complaint" method ="post">
+                <div class="form-group">
+                    <label for="input1">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="input1" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="input2">Location</label>
+                    <input type="text" name="location" class="form-control" id="input2" placeholder="Enter Location">
+                </div>
+                <div class="form-group">
+                    <label for="input3">Description</label>
+                    <textarea class="form-control" name="description"  id="inputDescription" rows="4" placeholder="Enter description"></textarea>
+            
+                    <!-- <input type="text" class="form-control" id="input3" placeholder="Enter Description"> -->
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="complaint.js"></script>
+</body>
+</html>
