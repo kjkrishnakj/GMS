@@ -6,15 +6,11 @@ const collection=require("./mongodb")
 const admin_collection=require("./admin_login2")
 const contact_collection=require("./contact")
 const complaint_collection=require("./complaint")
-// const dashboard_collection=require("views/dashboard")
-
 
 const path = require("path")
 const hbs = require("hbs");
 
 const app = express();
-app.use(express.json());
-
 
 
 
@@ -42,23 +38,24 @@ const Schema = mongoose.Schema;
 const mySchema = new Schema({ name: String,location: String,description: String, });
 const MyModel = mongoose.model('world', mySchema, 'complaints');
 
-// app.delete("/delete/:itemId", async (req, res) => {
-//   try {
-//     const itemId = req.params.itemId;
-//     const deletedItem = await Item.findByIdAndRemove(itemId);
 
-//     if (!deletedItem) {
-//       return res.json({ success: false, error: "Item not found." });
+// app.get("/custom-url/:itemId", async (req, res) => {
+//     try {
+//       const itemId = req.params.itemId;
+//       const dashboardItem = await Dashboard.findById(itemId);
+      
+//       if (!dashboardItem) {
+//         return res.status(404).send("Dashboard item not found.");
+//       }
+  
+//       // Handle your custom logic here
+//       // Render a specific view or send JSON data as needed
+      
+//     } catch (err) {
+//       console.error(err);
+//       res.status(500).send("Error retrieving dashboard item.");
 //     }
-
-//     return res.json({ success: true });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ success: false, error: "Error deleting item." });
-//   }
 // });
-
-
 
 app.get("/",function(req,res){
     res.sendFile(__dirname + '/index.html');
@@ -162,7 +159,6 @@ app.post("/complaint",async(req,res)=>{
         description:req.body.description
     }  
     await complaint_collection.insertMany([data2])
-
     res.render("complaint")
     
  })
@@ -178,34 +174,11 @@ app.post("/contact",async(req,res)=>{
     
 })
 
-// app.get('/delete/:id',(req,res)=>{
-//     .findByIdAndDelete({_id:req.params},(err,docs)=>{
-//         if(err){
-//             console.log("error");
-//         }
-//         else{
-//             console.log("deleted");
-//         }
-//     })
-// })
 
 
 
-app.delete('/delete/:itemId', async (req, res) => {
-    try {
-      const itemId = req.params.itemId;
-      const deletedItem = await MyModel.findByIdAndRemove(itemId);
-  
-      if (!deletedItem) {
-        return res.json({ success: false, error: 'Item not found.' });
-      }
-  
-      return res.json({ success: true });
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ success: false, error: 'Error deleting item.' });
-    }
-  });
+
+
 
 
 
