@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Add Bootstrap CSS and jQuery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z0I5t9z5lFf5r5l5u60BwR5g5F5P5j5F5g5U5t5d5V5" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+  body {
+   
+    background-image: url("/img/bg.jpg");
+    background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+    
+}
+/* .navbar{
+    position: relative;
+} */
+.glass-content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+   
+    text-align: center;
+  }
+  .c{
+    margin-top: 20%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 20%;
+    width: 98%;
+    height: 20cm;
+  }
+  .carousel-inner img {
+            width: 100%; /* Set the width to 100% to fit within the carousel container */
+            height: 100%; /* Auto-adjust the height to maintain the image aspect ratio */
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Centered text for the footer */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Add some spacing to social icons */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        /* Style the social icons */
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        /* Make the links in the footer white */
+        .footer a {
+            color: #fff;
+        }   
+
+  
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-transparent navbar-fixed-top" >
+        <div class="container">
+            <a class="navbar-brand" href="#">Garbage Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin_login">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" href="/login">Complaint</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="glass-content ">
+      <h1 style="margin-top: 5cm;color: aliceblue;">Welcome To GMS</h1>
+      <h4 style="color: aliceblue">"Revolutionizing Waste: Your Path to a Cleaner Tomorrow"</h4>
+    </div>
+    <div id="myCarousel" class="carousel slide c" data-ride="carousel">
+        <!-- Indicators (optional) -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    
+        <!-- Slides -->
+        <div class="carousel-inner c">
+            <div class="carousel-item active">
+                <img src="/img/waste managemen 0.png" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/img/waste managemen 1.png" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/img/managing waste 0.png" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/img/managing waste 1.png" alt="Image 3">
+            </div>
+            
+        </div>
+    
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+
+    <script>
+        $(document).ready(function() {
+            $('#myCarousel').carousel({
+                interval: 2000 // Change slides every 3 seconds (3000 milliseconds)
+            });
+        });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Contact Us</h4>
+                <p>Kelambakkam, Tamil Nadu 6000127<br>Phone: +91 8006 550 197<br>Email: gms@gmail.com</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/index">Home</a></li>
+                    
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Connect with Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i  class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/kj__krishna__kj?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        &copy; 2023 Garbage Management System
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
